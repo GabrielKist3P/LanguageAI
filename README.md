@@ -52,41 +52,6 @@ Procura por `LanguageAI` nas definições do VSCode:
 **MyMemory (padrão — gratuito, sem chave)**
 Funciona imediatamente, sem necessidade de conta. Ideal para uso pessoal e testes.
 
-**DeepL**
-1. Cria uma conta gratuita em [deepl.com](https://www.deepl.com/pro-api)
-2. Copia a tua chave de API
-3. Define `languageAI.apiProvider` como `deepl`
-4. Cola a chave em `languageAI.apiKey`
-
-**Google Cloud Translation**
-1. Ativa a [Cloud Translation API](https://cloud.google.com/translate)
-2. Cria uma chave de API na Google Cloud Console
-3. Define `languageAI.apiProvider` como `google`
-4. Cola a chave em `languageAI.apiKey`
-
----
-
-## 🚀 Começar a desenvolver
-
-```bash
-npm install
-npm run compile   # ou: npm run watch
-```
-
-Depois pressiona **F5** no VSCode para abrir uma janela de teste com a extensão carregada.
-
----
-
-## 📦 Gerar o pacote `.vsix`
-
-```bash
-npm install -g @vscode/vsce
-vsce package
-```
-
-Isto cria um ficheiro `language-ai-X.X.X.vsix`, que podes instalar manualmente em:
-`Extensions → ... → Install from VSIX...`
-
 ---
 
 ## 🗂 Estrutura do projeto
