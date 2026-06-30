@@ -2,14 +2,14 @@
   "name": "language-ai",
   "publisher": "GabrielKist",
   "displayName": "LanguageAI",
-  "description": "Translate text directly in VSCode, like Google Translate",
+  "description": "Translate text directly in VSCode.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/language-ai"
+    "url": "https://github.com/GabrielKist3P/LanguageAI"
   },
   "license": "MIT",
   "icon": "media/icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.85.0"
   },
