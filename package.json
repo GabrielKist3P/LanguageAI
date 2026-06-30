@@ -1,0 +1,114 @@
+{
+  "name": "language-ai",
+  "publisher": "GabrielKist",
+  "displayName": "LanguageAI",
+  "description": "Translate text directly in VSCode, like Google Translate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/language-ai"
+  },
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "translate",
+    "translator",
+    "google translate",
+    "i18n"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "language-ai.translateSelection",
+        "title": "LanguageAI: Traduzir",
+        "category": "LanguageAI"
+      },
+      {
+        "command": "language-ai.openPanel",
+        "title": "LanguageAI: Abrir Painel",
+        "category": "LanguageAI"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "language-ai.translateSelection",
+          "when": "editorHasSelection",
+          "group": "1_modification@1"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "language-ai.translateSelection",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorHasSelection"
+      },
+      {
+        "command": "language-ai.openPanel",
+        "key": "ctrl+shift+l",
+        "mac": "cmd+shift+l"
+      }
+    ],
+    "configuration": {
+      "title": "LanguageAI",
+      "properties": {
+        "languageAI.defaultTargetLanguage": {
+          "type": "string",
+          "default": "pt",
+          "description": "Default target language for translations (e.g. 'en', 'pt', 'es', 'fr')"
+        },
+        "languageAI.defaultSourceLanguage": {
+          "type": "string",
+          "default": "auto",
+          "description": "Default source language ('auto' for automatic detection)"
+        },
+        "languageAI.apiProvider": {
+          "type": "string",
+          "default": "libre",
+          "enum": [
+            "libre",
+            "deepl",
+            "google"
+          ],
+          "description": "Translation API provider to use"
+        },
+        "languageAI.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for your chosen translation provider (not needed for the default MyMemory provider)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.9.2",
+    "axios": "^1.6.0"
+  }
+}
