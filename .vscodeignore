@@ -3,7 +3,6 @@
 src/**
 .gitignore
 .eslintrc.json
-**/*.map
-**/*.ts
-!out/**
+.env.example
+*.map
 node_modules/**
