@@ -77,7 +77,7 @@ function openPopupPanel(
 
   popupPanel = vscode.window.createWebviewPanel(
     'languageAIPopup',
-    '🌐 LanguageAI',
+    'LanguageAI',
     {
       viewColumn: vscode.ViewColumn.Beside,
       preserveFocus: true, // keep cursor in editor
@@ -158,7 +158,7 @@ function openTranslatorPanel(context: vscode.ExtensionContext, initialText = '')
 
   translatorPanel = vscode.window.createWebviewPanel(
     'languageAI',
-    '🌐 LanguageAI',
+    'LanguageAI',
     vscode.ViewColumn.Beside,
     { enableScripts: true, retainContextWhenHidden: true }
   );
